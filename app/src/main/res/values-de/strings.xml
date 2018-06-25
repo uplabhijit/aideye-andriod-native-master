@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        
+    <string name="app_name"> AidEye </string>
+    <string name="data_text_hint_interactive"> Geben Sie hier </string> ein
+        
+    <string name="data_text_hint_auditory"> Tippen Sie auf die Schaltfläche mic </string>
+        
+    <string name="powered_by"> Unterstützt von </string>
+        
+    <string name="save_button"> Speichern </string>
+        
+    <string name="setting_text"> Einstellung </string>
+
+        
+    <string name="good_morning"> Guten Morgen </string>
+        
+    <string name="good_nachmittag"> Guten Nachmittag </string>
+        
+    <string name="good_evening"> Guten Abend </string>
+
+        
+    <string name="speed_text"> Geschwindigkeit </string>
+        
+    <string name="pitc_text"> Tonhöhe </string>
+        
+    <string name="test_voice_data"> Sprachdaten testen </string>
+        
+    <string name="test_voice_data_content"> Dies sind die Testdaten für den Sprachtest </string>
+        
+    <string name="nfc_not_supported_msg"> Ihr Gerät wird nicht von nfc unterstützt </string>
+    <string name="nfc_disable_msg"> Nfc ist deaktiviert Bitte schalten Sie </string> ein
+        
+    <string name="welcome_msg"> Tippen Sie bitte auf den Bildschirm, um zu sprechen, Daten auf dem Tag </string>
+        
+    <string name="prefix_msg_of_confirm_dialog"> Sie sagten </string>
+        
+    <string name="sufix_msg_of_confirm_dialog"> Tippen Sie auf das Tag auf dem Gerät. um Daten zu speichern. in einem NFC-Tag </string>
+        
+    <string name="write_error"> Schreibfehler </string>
+        
+    <string name="null_tag_msg"> Beschädigtes Tag </string>
+        
+    <string name="say_something_msg"> Sagen Sie etwas </string>
+        
+    <string name="speaking_after_msg"> Versuchen Sie, nachdem Sie gesprochen haben </string>
+        
+    <string name="speach_not_supported"> Sprache nicht unterstützt </string>
+        
+    <string name="tag_data_msg"> Tag-Daten: </string>
+        
+    <string name="tag_detected"> Tag erkannt </string>
+    <string name="interactive_button_text">Interaktiv</string>
+
+        
+    <string-array name="listValues">
+        <item>Select language </item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Swedish</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Greek</item>
+    </string-array>
+    <string name="auditory_button_text">Auditiv</string>
+    <string name="data_saved_successfully">Daten erfolgreich gespeichert</string>
+    <string name="enable_nfc_title_text">Aktivieren Sie NFC</string>
+    <string name="enable_nfc_description_text">Bitte aktivieren Sie den NFC-Dienst auf Ihrem Gerät</string>
+    <string name="translating_data">Daten übersetzen ...</string>
+
+</resources>

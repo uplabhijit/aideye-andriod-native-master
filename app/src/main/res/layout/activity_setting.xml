@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            card_view:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:id="@+id/layout1"
+                android:layout_width="351dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imagespeed"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/speedicon" />
+
+                <TextView
+                    android:id="@+id/speed_text_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imagespeed"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:text="@string/speed_text"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="95dp">
+
+                <SeekBar
+                    android:id="@+id/speed_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+
+                    android:max="20"
+                    android:min="0" />
+
+                <RelativeLayout
+                    android:layout_width="352dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/view_speed_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/view_speed_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="14dp"
+                        android:text="100"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view1"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            card_view:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:id="@+id/layout2"
+                android:layout_width="351dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imagepitch"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pitchicon" />
+
+                <TextView
+                    android:id="@+id/pitch_text_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imagepitch"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:text="@string/pitc_text"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="95dp">
+
+                <SeekBar
+                    android:id="@+id/pitch_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:max="20"
+                    android:min="0" />
+
+                <RelativeLayout
+                    android:layout_width="352dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/view_pitch_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/view_pitch_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="14dp"
+                        android:text="100"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/test_voice_data_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/test_voice_data"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/test_voice_editext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/test_voice_data_label"
+                android:layout_marginTop="20dp"
+                android:text="@string/test_voice_data_content"
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/test_voice_editext"
+                android:layout_marginTop="15dp"
+                android:spinnerMode="dropdown" />
+
+           <!-- <TextView
+                android:id="@+id/test_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#000000"
+                android:text="@string/test_gender_data"
+                android:textSize="18dp" />
+
+
+            <RadioButton
+                android:id="@+id/radio_pirates"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/test_gender"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="#000000"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radio_pirates1"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/test_gender"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/radio_pirates"
+                android:onClick="onRadioButtonClicked"
+                android:layout_marginBottom="15dp"
+                android:textColor="#000000"
+                android:text="Female" />-->
+        </RelativeLayout>
+
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/mainlayout"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/layout1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imagespeed"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:src="@drawable/speedicon" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/speed_text_label"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/imagespeed"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:text="@string/speed_text"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="18sp" />-->
+
+
+        <!--</RelativeLayout>-->
+
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/layout1"-->
+        <!--android:layout_centerVertical="true">-->
+
+        <!--<SeekBar-->
+        <!--android:id="@+id/speed_seekbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:max="20"-->
+        <!--android:min="0" />-->
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/view_speed_min"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="13dp"-->
+        <!--android:text="0"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="10sp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/view_speed_max"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="13dp"-->
+        <!--android:text="100"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+        <!--</RelativeLayout>-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/mainlayout1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/mainlayout">-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/layout2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imagepitch"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:src="@drawable/pitch"-->
+        <!--android:tint="#f3b13c" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/pitch_text_label"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/imagepitch"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:paddingTop="20dp"-->
+        <!--android:text="@string/pitc_text"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="18sp" />-->
+        <!--</RelativeLayout>-->
+
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toRightOf="@+id/layout2"-->
+        <!--android:paddingLeft="20dp">-->
+
+        <!--<SeekBar-->
+        <!--android:id="@+id/pitch_seekbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:max="20"-->
+        <!--android:min="0" />-->
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/view_pitch_min"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="13dp"-->
+        <!--android:text="0"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="10sp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/view_pitch_max"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="13dp"-->
+        <!--android:text="100"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+        <!--</RelativeLayout>-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/mainlayout1">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/test_voice_data_label"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:text="@string/test_voice_data"-->
+        <!--android:textSize="18dp" />-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/test_voice_editext"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/test_voice_data_label"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:text="@string/test_voice_data_content" />-->
+
+        <!--<Spinner-->
+        <!--android:id="@+id/spinner1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_below="@+id/test_voice_editext"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:spinnerMode="dropdown" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/test_gender"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/spinner1"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:text="@string/test_gender_data"-->
+        <!--android:textSize="18dp" />-->
+
+
+        <!--<RadioButton-->
+        <!--android:id="@+id/radio_pirates"-->
+        <!--android:layout_width="170dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/test_gender"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:onClick="onRadioButtonClicked"-->
+        <!--android:text="Male" />-->
+
+        <!--<RadioButton-->
+        <!--android:id="@+id/radio_pirates1"-->
+        <!--android:layout_width="170dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/test_gender"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_toRightOf="@+id/radio_pirates"-->
+        <!--android:onClick="onRadioButtonClicked"-->
+        <!--android:text="Female" />-->
+
+
+        <!--</RelativeLayout>-->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

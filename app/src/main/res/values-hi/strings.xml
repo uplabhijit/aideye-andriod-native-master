@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        
+    <string name="app_name"> एडीई </string>
+        
+    <string name="data_text_hint_interactive"> यहां टाइप करें </string>
+        
+    <string name="data_text_hint_auditory"> माइक बटन पर टैप करें </string>
+        
+    <string name="powered_by"> द्वारा संचालित </string>
+        
+    <string name="save_button"> सहेजें </string>
+        
+    <string name="setting_text"> सेटिंग </string>
+
+        
+    <string name="good_morning"> सुप्रभात </string>
+        
+    <string name="good_afternoon"> अच्छा दोपहर </string>
+        
+    <string name="good_evening"> अच्छी शाम </string>
+
+        
+    <string name="speed_text"> गति </string>
+        
+    <string name="pitc_text"> पिच </string>
+        
+    <string name="test_voice_data"> टेस्ट वॉयस डेटा </string>
+        <string name="test_voice_data_content"> यह ध्वनि परीक्षण </string> के लिए परीक्षण डेटा है
+        
+    <string name="nfc_not_supported_msg"> आपका डिवाइस nfc समर्थित नहीं है </string>
+        <string name="nfc_disable_msg">कृपया अपने डिवाइस में एनएफसी सेवा सक्षम करें</string> चालू करें
+        
+    <string name="welcome_msg"> कृपया टैग पर डेटा बोलने, कैप्चर करने और स्टोर करने के लिए स्क्रीन पर टैप करें </string>
+        
+    <string name="prefix_msg_of_confirm_dialog"> आपने कहा </string>
+        
+    <string name="sufix_msg_of_confirm_dialog"> डिवाइस पर टैग टैप करें। डेटा स्टोर करने के लिए। एक एनएफसी टैग में </string>
+        
+    <string name="write_error"> त्रुटि लिखें </string>
+        
+    <string name="null_tag_msg"> दूषित टैग </string>
+        
+    <string name="say_something_msg"> कुछ कहें </string>
+        
+    <string name="speaking_after_msg"> पूर्ण होने के बाद प्रयास करें </string>
+        
+    <string name="speach_not_supported"> भाषण समर्थित नहीं </string>
+        
+    <string name="tag_data_msg"> टैग डेटा: </string>
+        
+    <string name="tag_detected"> टैग का पता चला </string>
+
+
+    <string-array name="listValues">
+        <item>Select language </item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Swedish</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Greek</item>
+    </string-array>
+    <string name="auditory_button_text">श्रवण</string>
+    <string name="interactive_button_text">इंटरएक्टिव</string>
+    <string name="data_saved_successfully">डेटा सफलतापूर्वक सहेजा गया</string>
+    <string name="enable_nfc_title_text">एनएफसी सक्षम करें</string>
+    <string name="enable_nfc_description_text">कृपया अपने डिवाइस में एनएफसी सेवा सक्षम करें</string>
+    <string name="translating_data">डेटा अनुवाद कर रहा है ...</string>
+
+
+</resources>

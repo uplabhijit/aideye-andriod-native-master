@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AidEye</string>
+    <string name="data_text_hint_interactive">Escriba aquí</string>
+    <string name="data_text_hint_auditory">Toca el botón de micrófono</string>
+    <string name="powered_by">energizado por</string>
+    <string name="save_button">Salvar</string>
+    <string name="setting_text">Ajuste</string>
+
+    <string name="good_morning">Buenos días</string>
+    <string name="good_afternoon">Buenas tardes</string>
+    <string name="good_evening">"Buenas tardes "</string>
+
+    <string name="speed_text">Velocidad</string>
+    <string name="pitc_text">Tono</string>
+    <string name="test_voice_data">Prueba de datos de voz</string>
+    <string name="test_voice_data_content">Estos son los datos de prueba para las pruebas de voz</string>
+    <string name="nfc_not_supported_msg">Su dispositivo no es compatible con NFC</string>
+    <string name="nfc_disable_msg">Nfc está deshabilitado, enciéndelo</string>
+    <string name="welcome_msg">Amablemente toque la pantalla para hablar, capturar y almacenar datos en la etiqueta</string>
+    <string name="prefix_msg_of_confirm_dialog">Tu dijiste</string>
+    <string name="sufix_msg_of_confirm_dialog"> Toca etiqueta en el dispositivo. para almacenar datos. en la etiqueta A nfc</string>
+    <string name="write_error">Error de escritura</string>
+    <string name="null_tag_msg">Etiqueta corrupta</string>
+    <string name="say_something_msg">Di algo</string>
+    <string name="speaking_after_msg">Pruebe después de hablar completo</string>
+    <string name="speach_not_supported">Discurso no admitido</string>
+    <string name="tag_data_msg">datos de etiquetas: </string>
+    <string name="tag_detected">Etiqueta detectada</string>
+
+        
+    <string-array name="listValues">
+        <item>Select language </item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Swedish</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Greek</item>
+    </string-array>
+    <string name="auditory_button_text">auditivo</string>
+    <string name="interactive_button_text">Interactivo</string>
+    <string name="data_saved_successfully">Datos guardados exitosamente</string>
+    <string name="enable_nfc_title_text">Habilitar NFC</string>
+    <string name="enable_nfc_description_text">Habilite el servicio NFC en su dispositivo</string>
+    <string name="translating_data">Traduciendo datos ...</string>
+
+</resources>

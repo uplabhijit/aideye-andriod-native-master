@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        
+    <string name="nome_app"> AidEye </string>
+        
+    <string name="data_text_hint_interactive"> Digita qui </string>
+        
+    <string name="data_text_hint_auditory"> tocca il pulsante mic </string>
+        
+    <string name="powered_by"> Fornito da </string>
+        
+    <string name="save_button"> Salva </string>
+        
+    <string name="setting_text"> Setting </string>
+
+        
+    <string name="good_morning"> Good Morning </string>
+        
+    <string name="good_afternoon"> Good Afternoon </string>
+        
+    <string name="good_evening"> Buonasera </string>
+
+        
+    <string name="speed_text"> Velocità </string>
+        
+    <string name="pitch_text"> Pitch </string>
+        
+    <string name="test_voice_data"> Prova dati vocali </string>
+        
+    <string name="test_voice_data_content"> Questi sono i dati di test per i test vocali </string>
+        
+    <string name="nfc_not_supported_msg"> Il tuo dispositivo non è supportato da nfc </string>
+        
+    <string name="nfc_disable_msg"> Nfc è disabilitato, accendi </string>
+        
+    <string name="welcome_msg"> Gentilmente tocca lo schermo per parlare, catturare e memorizzare i dati sul tag </string>
+        
+    <string name="prefix_msg_of_confirm_dialog"> Hai detto </string>
+        
+    <string name="sufix_msg_of_confirm_dialog"> Tocca il tag al dispositivo. per memorizzare i dati. in Un tag nfc </string>
+        
+    <string name="write_error"> Scrive errore </string>
+        
+    <string name="null_tag_msg"> Tag danneggiato </string>
+        
+    <string name="say_something_msg"> Pronuncia qualcosa </string>
+        
+    <string name="speaking_after_msg"> Prova dopo aver parlato completato </string>
+        
+    <string name="speach_not_supported"> Speach not supported </string>
+        
+    <string name="tag_data_msg"> tag data: </string>
+        
+    <string name="tag_detected"> Tag rilevato </string>
+
+
+    <string-array name="listValues">
+        <item>Select language </item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Swedish</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Greek</item>
+    </string-array>
+    <string name="auditory_button_text">Uditorio</string>
+    <string name="interactive_button_text">Interattivo</string>
+    <string name="data_saved_successfully">Dati salvati correttamente</string>
+    <string name="enable_nfc_title_text">Abilita NFC</string>
+    <string name="enable_nfc_description_text">Si prega di abilitare il servizio NFC sul dispositivo</string>
+    <string name="translating_data">Traduzione dei dati ...</string>
+
+
+</resources>

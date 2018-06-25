@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        
+    <string name="app_name"> AidEye </string>
+        
+    <string name="data_text_hint_interactive"> Type hier </string>
+        
+    <string name="data_text_hint_auditory"> Tik op de microfoonknop </string>
+        
+    <string name="powered_by"> Mogelijk gemaakt door </string>
+        
+    <string name="save_button"> Opslaan </string>
+        
+    <string name="setting_text"> Instelling </string>
+
+        
+    <string name="good_morning"> Good Morning </string>
+        
+    <string name="good_afternoon"> Good Afternoon </string>
+        
+    <string name="good_evening"> Good Evening </string>
+
+        
+    <string name="speed_text"> Speed ​​</string>
+        
+    <string name="pitc_text"> Toonhoogte </string>
+        
+    <string name="test_voice_data"> Test spraakgegevens </string>
+        
+    <string name="test_voice_data_content"> Dit zijn de testgegevens voor stemtesten </string>
+        
+    <string name="nfc_not_supported_msg"> Uw apparaat wordt niet nfc ondersteund </string>
+        <string name="nfc_disable_msg"> Nfc is uitgeschakeld Schakel </string> in
+        <string name="welcome_msg"> Tik op het scherm om te spreken, vast te leggen en gegevens op tag </string> op
+    te slaan
+        
+    <string name="prefix_msg_of_confirm_dialog"> U zei </string>
+        
+    <string name="sufix_msg_of_confirm_dialog"> Tik tag aan op het apparaat. om gegevens op te slaan. in een nfc-tag </string>
+        
+    <string name="write_error"> Write error </string>
+        
+    <string name="null_tag_msg"> Beschadigde tag </string>
+        
+    <string name="say_something_msg"> Zeg iets </string>
+        
+    <string name="speaking_after_msg"> Probeer na het voltooien van het gesprek </string>
+        
+    <string name="speach_not_supported"> Speach niet ondersteund </string>
+        
+    <string name="tag_data_msg"> taggegevens: </string>
+        
+    <string name="tag_detected"> Tag Detected </string>
+
+
+    <string-array name="listValues">
+        <item>Select language </item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Swedish</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Greek</item>
+    </string-array>
+    <string name="auditory_button_text">Gehoor</string>
+    <string name="interactive_button_text">Interactieve</string>
+    <string name="data_saved_successfully">Gegevens succesvol opgeslagen</string>
+    <string name="enable_nfc_title_text">Schakel NFC in</string>
+    <string name="enable_nfc_description_text">Schakel de NFC-service in op uw apparaat</string>
+    <string name="translating_data">Gegevens vertalen ...</string>
+
+
+</resources>

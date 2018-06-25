@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        
+    <string name="app_name"> AidEye </string>
+        
+    <string name="data_text_hint_interactive"> Πληκτρολογήστε εδώ </string>
+        
+    <string name="data_text_hint_auditory"> Πατήστε στο κουμπί μικροφώνου </string>
+        
+    <string name="powered_by"> Τροφοδοτείται από </string>
+        
+    <string name="save_button"> Αποθήκευση </string>
+        
+    <string name="setting_text"> Ρύθμιση </string>
+        
+    <string name="good_morning"> Καλημέρα </string>
+        
+    <string name="good_afternoon"> Καλή Απόγευμα </string>
+        
+    <string name="good_evening"> Καλησπέρα </string>
+        
+    <string name="speed_text"> Ταχύτητα </string>
+        
+    <string name="pitc_text"> Pitch </string>
+        
+    <string name="test_voice_data"> Δοκιμή δεδομένων φωνής </string>
+        
+    <string name="test_voice_data_content"> Αυτά είναι τα δεδομένα δοκιμών για φωνητικές δοκιμές </string>
+        
+    <string name="nfc_not_supported_msg"> Η συσκευή σας δεν υποστηρίζεται από nfc </string>
+        
+    <string name="nfc_disable_msg"> Το Nfc είναι απενεργοποιημένο, ενεργοποιήστε το </string>
+        
+    <string name="welcome_msg"> Πατήστε παρακαλώ στην οθόνη για να μιλήσετε, να καταγράψετε και να αποθηκεύσετε δεδομένα στην ετικέτα </string>
+        
+    <string name="prefix_msg_of_confirm_dialog"> Είπατε </string>
+        
+    <string name="sufix_msg_of_confirm_dialog"> Πατήστε ετικέτα στη συσκευή. για την αποθήκευση δεδομένων. σε ετικέτα Nfc </string>
+        
+    <string name="write_error"> Γράψτε σφάλμα </string>
+        
+    <string name="null_tag_msg"> Κατεστραμμένη ετικέτα </string>
+        
+    <string name="say_something_msg"> Πείτε κάτι </string>
+        
+    <string name="speaking_after_msg"> Δοκιμάστε μετά την ομιλία ολοκληρώθηκε </string>
+        
+    <string name="speach_not_supported"> Ομιλία δεν υποστηρίζεται </string>
+        
+    <string name="tag_data_msg"> δεδομένα ετικέτας: </string>
+        
+    <string name="tag_detected"> Εντοπίστηκε ετικέτα </string>
+
+        
+    <string-array name="listValues">
+        <item>Select language </item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Swedish</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Greek</item>
+    </string-array>
+    <string name="auditory_button_text">ακουστικός</string>
+    <string name="interactive_button_text">Διαδραστικό</string>
+    <string name="data_saved_successfully">Τα δεδομένα αποθηκεύτηκαν με επιτυχία</string>
+    <string name="enable_nfc_title_text">Ενεργοποιήστε το NFC</string>
+    <string name="enable_nfc_description_text">Ενεργοποιήστε την υπηρεσία NFC στη συσκευή σας</string>
+    <string name="translating_data">Μετάφραση δεδομένων ...</string>
+</resources>

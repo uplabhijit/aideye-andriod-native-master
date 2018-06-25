@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        
+    <string name="app_name"> Aide-mémoire </string>
+        
+    <string name="data_text_hint_interactive"> Tapez ici </string>
+        
+    <string name="data_text_hint_auditory"> Appuyez sur le bouton du micro </string>
+        
+    <string name="powered_by"> Propulsé par </string>
+        
+    <string name="save_button"> Enregistrer </string>
+        
+    <string name="setting_text"> Paramètre </string>
+
+        
+    <string name="good_morning"> Bonjour </string>
+        
+    <string name="good_afternoon"> Bon après-midi </string>
+        
+    <string name="good_evening"> Bonsoir </string>
+
+        
+    <string name="speed_text"> Vitesse </string>
+        
+    <string name="pitc_text"> Hauteur </string>
+        
+    <string name="test_voice_data"> Tester les données vocales </string>
+        
+    <string name="test_voice_data_content"> Ceci est la donnée de test pour le test vocal </string>
+        
+    <string name="nfc_not_supported_msg"> Votre appareil n\'est pas pris en charge par nfc </string>
+        
+    <string name="nfc_disable_msg"> Nfc est désactivé s\'il vous plaît activer </string>
+        
+    <string name="welcome_msg"> Tapez sur l\'écran pour parler, capturer et stocker des données sur l'étiquette </string>
+        
+    <string name="prefix_msg_of_confirm_dialog"> Vous avez dit </string>
+        
+    <string name="sufix_msg_of_confirm_dialog"> Touchez la balise sur l\'appareil. pour stocker des données. dans une balise nfc </string>
+        
+    <string name="write_error"> Erreur d\'écriture </string>
+        
+    <string name="null_tag_msg"> Balise corrompue </string>
+        
+    <string name="say_something_msg"> Dites quelque chose </string>
+        
+    <string name="speaking_after_msg"> Essayez après avoir terminé la discussion </string>
+        
+    <string name="speach_not_supported"> Speach non supporté </string>
+        
+    <string name="tag_data_msg"> données de tag: </string>
+        
+    <string name="tag_detected"> Balise détectée </string>
+
+
+        
+    <string-array name="listValues">
+        <item>Select language </item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Swedish</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Greek</item>
+    </string-array>
+    <string name="auditory_button_text">Auditif</string>
+    <string name="interactive_button_text">Interactif</string>
+    <string name="data_saved_successfully">Données enregistrées avec succès</string>
+    <string name="enable_nfc_title_text">Activer NFC</string>
+    <string name="enable_nfc_description_text">Veuillez activer le service NFC sur votre appareil</string>
+    <string name="translating_data">Traduire des données ...</string>
+
+
+</resources>

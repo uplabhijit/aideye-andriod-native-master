@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AidEye</string>
+    <string name="data_text_hint_interactive">Type Here</string>
+    <string name="data_text_hint_auditory">Tap on mic button</string>
+    <string name="powered_by">Powered by</string>
+    <string name="save_button">Save</string>
+    <string name="setting_text">Setting</string>
+    <string name="subscription_text">Subscription</string>
+    <string name="logout_text">Logout</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="good_afternoon">Good Afternoon</string>
+    <string name="good_evening">Good Evening</string>
+    <string name="speed_text">Speed</string>
+    <string name="pitc_text">Pitch</string>
+    <string name="test_voice_data">Test Voice Data</string>
+    <string name="test_voice_data_content">This is the test data for voice testing</string>
+    <string name="test_gender_data">Select voice gender</string>
+    <string name="nfc_not_supported_msg">Your device is not nfc supported</string>
+    <string name="nfc_disable_msg">Nfc is disabled please turn on</string>
+    <string name="welcome_msg">Kindly tap on screen to speak, capture and store data on tag</string>
+    <string name="prefix_msg_of_confirm_dialog">You said</string>
+    <string name="sufix_msg_of_confirm_dialog"> Tap  tag  to the device.  to store data. in A nfc tag</string>
+    <string name="write_error">Write error</string>
+    <string name="null_tag_msg">Corrupted tag</string>
+    <string name="say_something_msg">Say something</string>
+    <string name="speaking_after_msg">Try after speaking completed</string>
+    <string name="speach_not_supported">Speach not supported</string>
+    <string name="tag_data_msg">tag data: </string>
+    <string name="tag_detected">Tag Detected</string>
+    <string name="auditory_button_text">Auditory</string>
+    <string name="interactive_button_text">Interactive</string>
+    <string name="data_saved_successfully"> Data saved successfully</string>
+    <string name="enable_nfc_title_text">Enable NFC</string>
+    <string name="enable_nfc_description_text">Please enable NFC service in your device</string>
+    <string name="translating_data">Translating data...</string>
+
+    <string name="json_get_url"> http://ec2-18-216-89-205.us-east-2.compute.amazonaws.com:32951/user</string>
+    <string name="login_url">http://ec2-18-216-89-205.us-east-2.compute.amazonaws.com:32951/user/login</string>
+
+    <string name="json_otp_post_url">http://ec2-18-216-89-205.us-east-2.compute.amazonaws.com:32951/user/verifyotp</string>
+    <string name="phone_Number">PhoneNumber</string>
+    <string name="Password">Password</string>
+    <string name="btn_Login">Login</string>
+    <string name="forgot_Password">Forgot Password ?</string>
+    <string name="create_Account">Create Account</string>
+
+    <string name="full_Name">Full Name</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="address">Address</string>
+    <string name="pin_zipcode">Pincode / Zipcode</string>
+    <string name="phone_No">Phone No</string>
+    <string name="reg_Password">Password</string>
+    <string name="btn_Register">Register</string>
+
+    <string name="prompt_email">Email</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+
+    <string name="need">We need to text you the OTP to</string>
+    <string name="auth">authenticate your account</string>
+
+    <string name="phone">Enter OTP</string>
+    <string name="number">+91-4445556987</string>
+    <string name="ok">OK</string>
+
+    <string-array name="listValues">
+        <item>Select language </item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Swedish</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Greek</item>
+    </string-array>
+</resources>

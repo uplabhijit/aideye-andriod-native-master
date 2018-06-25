@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        
+    <string name="app_name"> AidEye </string>
+        
+    <string name="data_text_hint_interactive"> Skriv här </string>
+        
+    <string name="data_text_hint_auditory"> Tryck på mikrofonknappen </string>
+        
+    <string name="powered_by"> Drivs av </string>
+        
+    <string name="save_button"> Spara </string>
+        
+    <string name="setting_text"> Inställning </string>
+
+        
+    <string name="good_morning"> God morgon </string>
+        
+    <string name="good_afternoon"> God eftermiddag </string>
+        
+    <string name="good_evening"> God kväll </string>
+
+        
+    <string name="speed_text"> Hastighet </string>
+        
+    <string name="pitc_text">tonhöjd</string>
+        
+    <string name="test_voice_data"> Testa taldata </string>
+        
+    <string name="test_voice_data_content"> Detta är testdata för rösttestning </string>
+        
+    <string name="nfc_not_supported_msg"> Enheten är inte stödd för nfc </string>
+        
+    <string name="nfc_disable_msg"> Nfc är inaktiverat vänligen sätt på </string>
+        
+    <string name="welcome_msg"> Vänligen tryck på skärmen för att tala, fånga och lagra data på taggen </string>
+        
+    <string name="prefix_msg_of_confirm_dialog"> Du sa </string>
+        
+    <string name="sufix_msg_of_confirm_dialog"> Tryck på tagg till enheten. för att lagra data. i en nfc-tagg </string>
+        
+    <string name="write_error"> Skriv fel </string>
+        
+    <string name="null_tag_msg"> Korrupt tagg </string>
+        
+    <string name="say_something_msg"> Säg något </string>
+        
+    <string name="speaking_after_msg"> Försök efter att ha avslutat ordningen </string>
+        
+    <string name="speach_not_supported"> Speach stöds inte </string>
+        
+    <string name="tag_data_msg"> taggdata: </string>
+        
+    <string name="tag_detected"> Tag detected </string>
+
+        
+    <string-array name="listValues">
+        <item>Select language </item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Swedish</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Greek</item>
+    </string-array>
+    <string name="auditory_button_text">Auditiv</string>
+    <string name="interactive_button_text">Interaktiv</string>
+    <string name="data_saved_successfully">Data sparas framgångsrikt</string>
+    <string name="enable_nfc_title_text">Aktivera NFC</string>
+    <string name="enable_nfc_description_text">Aktivera NFC-tjänsten i din enhet</string>
+    <string name="translating_data">Översätter data ...</string>
+
+
+</resources>

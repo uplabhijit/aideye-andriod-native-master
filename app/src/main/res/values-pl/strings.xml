@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        
+    <string name="nazwa_aplikacji"> AidEye </string>
+        
+    <string name="data_text_hint_interactive"> Wpisz tutaj </string>
+        
+    <string name="data_text_hint_auditory"> Nacisnąć przycisk mikrofonu </string>
+        
+    <string name="powered_by"> Obsługiwane przez </string>
+        
+    <string name="save_button"> Save </string>
+        
+    <string name="setting_text"> Ustawienie </string>
+
+        
+    <string name="good_morning"> Dzień dobry </string>
+        
+    <string name="good_afternoon"> Good Afternoon </string>
+        
+    <string name="good_evening"> Dobry wieczór </string>
+
+        
+    <string name="speed_text">Prędkość​​</string>
+        
+    <string name="pitc_text">Smoła</string>
+        
+    <string name="test_voice_data">Testuj dane głosowe</string>
+        
+    <string name="test_voice_data_content"> To jest dane testowe dla testów głosowych </string>
+        
+    <string name="nfc_not_supported_msg"> Twoje urządzenie nie jest obsługiwane przez nfc </string>
+        
+    <string name="nfc_disable_msg"> Nfc jest wyłączony proszę włączyć </string>
+        
+    <string name="welcome_msg"> Uprzejmie dotknij ekranu, aby mówić, przechwytywać i przechowywać dane na tagu </string>
+        
+    <string name="prefix_msg_of_confirm_dialog"> Powiedziałeś </string>
+        
+    <string name="sufix_msg_of_confirm_dialog"> Naciśnij znacznik na urządzeniu. do przechowywania danych. w tagu nfc </string>
+        
+    <string name="write_error"> Write error </string>
+        
+    <string name="null_tag_msg"> Uszkodzony tag </string>
+        
+    <string name="say_something_msg"> Powiedz coś </string>
+        
+    <string name="speaking_after_msg"> Spróbuj po zakończeniu wypowiadania </string>
+        
+    <string name="speach_not_supported"> Speach not supported </string>
+        
+    <string name="tag_data_msg"> dane znacznika: </string>
+        
+    <string name="tag_detected"> Wykryto znacznik </string>
+
+
+        
+    <string-array name="listValues">
+        <item>Select language </item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Swedish</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Greek</item>
+    </string-array>
+    <string name="auditory_button_text">Słuchowy</string>
+    <string name="interactive_button_text">Interaktywny</string>
+    <string name="data_saved_successfully">Dane zostały pomyślnie zapisane</string>
+    <string name="enable_nfc_title_text">Włącz NFC</string>
+    <string name="enable_nfc_description_text">Włącz usługę NFC na swoim urządzeniu</string>
+    <string name="translating_data">Tłumaczenie danych ...</string>
+
+</resources>
