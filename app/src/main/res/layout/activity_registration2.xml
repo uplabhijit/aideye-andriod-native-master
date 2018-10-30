@@ -9,7 +9,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -20,7 +21,6 @@
                 android:layout_width="180dp"
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
-
                 android:layout_marginTop="60dp"
                 android:src="@drawable/aideyelogo" />
 
@@ -47,11 +47,11 @@
 
                         <ImageView
                             android:id="@+id/imageView1"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_centerHorizontal="true"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/nameicon" />
+                            android:src="@drawable/personicon" />
+
 
                         <EditText
                             android:id="@+id/nameText"
@@ -61,17 +61,21 @@
                             android:layout_marginRight="30dp"
                             android:background="#00154875"
                             android:fontFamily="sans-serif-light"
-                            android:hint="Full Name"
+                            android:hint="@string/full_name"
                             android:inputType="text"
-                            android:paddingLeft="25dp" />
-
+                            android:paddingLeft="25dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="26sp" />
                     </LinearLayout>
-
                     <ViewAnimator
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:background="#dedada" />
+                        android:background="#eea636" />
+
+
                 </LinearLayout>
 
 
@@ -89,11 +93,10 @@
 
                         <ImageView
                             android:id="@+id/imageView2"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_centerHorizontal="true"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/emailicon" />
+                            android:src="@drawable/envelope" />
 
                         <AutoCompleteTextView
                             android:id="@+id/emailText"
@@ -103,9 +106,14 @@
                             android:layout_marginRight="30dp"
                             android:background="#00154875"
                             android:fontFamily="sans-serif-light"
-                            android:hint="E-mail"
+                            android:hint="@string/e_mail"
                             android:inputType="textEmailAddress"
-                            android:paddingLeft="25dp" />
+                            android:paddingLeft="25dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="26sp"
+                            tools:ignore="HardcodedText" />
 
                     </LinearLayout>
 
@@ -113,7 +121,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:background="#dedada" />
+                        android:background="#eea636" />
                 </LinearLayout>
 
 
@@ -131,11 +139,11 @@
 
                         <ImageView
                             android:id="@+id/imageView5"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:layout_centerHorizontal="true"
                             android:layout_gravity="center"
-                            android:src="@drawable/location" />
+                            android:src="@drawable/book" />
 
                         <EditText
                             android:id="@+id/addressText"
@@ -145,9 +153,13 @@
                             android:layout_marginRight="30dp"
                             android:background="#00154875"
                             android:fontFamily="sans-serif-light"
-                            android:hint="Address"
+                            android:hint="@string/full_address"
                             android:inputType="text"
-                            android:paddingLeft="25dp" />
+                            android:paddingLeft="25dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="26sp" />
 
                     </LinearLayout>
 
@@ -155,7 +167,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:background="#dedada" />
+                        android:background="#eea636" />
                 </LinearLayout>
 
 
@@ -173,11 +185,11 @@
 
                         <ImageView
                             android:id="@+id/imageView6"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:layout_centerHorizontal="true"
                             android:layout_gravity="center"
-                            android:src="@drawable/zipcodeicon" />
+                            android:src="@drawable/password" />
 
                         <EditText
                             android:id="@+id/zipcode"
@@ -187,9 +199,13 @@
                             android:layout_marginRight="30dp"
                             android:background="#00154875"
                             android:fontFamily="sans-serif-light"
-                            android:hint="Postcode / zipcode "
+                            android:hint="@string/postcode_zipcode"
                             android:inputType="textPostalAddress"
-                            android:paddingLeft="25dp" />
+                            android:paddingLeft="25dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="26sp" />
 
                     </LinearLayout>
 
@@ -197,7 +213,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:background="#dedada" />
+                        android:background="#eea636" />
                 </LinearLayout>
 
 
@@ -215,11 +231,11 @@
 
                         <ImageView
                             android:id="@+id/imageView3"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:layout_centerHorizontal="true"
                             android:layout_gravity="center"
-                            android:src="@drawable/phoneicon" />
+                            android:src="@drawable/phonecall" />
 
                         <EditText
                             android:id="@+id/phoneText"
@@ -229,9 +245,13 @@
                             android:layout_marginRight="30dp"
                             android:background="#00154875"
                             android:fontFamily="sans-serif-light"
-                            android:hint="Phone No."
+                            android:hint="@string/phone_number"
                             android:inputType="number"
-                            android:paddingLeft="25dp" />
+                            android:paddingLeft="25dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="26sp" />
 
                     </LinearLayout>
 
@@ -239,7 +259,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:background="#dedada" />
+                        android:background="#eea636" />
                 </LinearLayout>
 
 
@@ -257,11 +277,11 @@
 
                         <ImageView
                             android:id="@+id/imageView4"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:layout_centerHorizontal="true"
                             android:layout_gravity="center"
-                            android:src="@drawable/passwordicon" />
+                            android:src="@drawable/lock" />
 
                         <EditText
                             android:id="@+id/passText"
@@ -271,9 +291,13 @@
                             android:layout_marginRight="30dp"
                             android:background="#00154875"
                             android:fontFamily="sans-serif-light"
-                            android:hint="Password"
+                            android:hint="@string/password"
                             android:inputType="textPassword"
-                            android:paddingLeft="25dp" />
+                            android:paddingLeft="25dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="26sp" />
 
                     </LinearLayout>
 
@@ -281,7 +305,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:background="#dedada" />
+                        android:background="#eea636" />
                 </LinearLayout>
 
 
@@ -290,63 +314,18 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/addresstext"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
                     android:background="@drawable/round_button"
                     android:onClick="register"
-                    android:text="Register"
+                    android:text="@string/register"
+                    android:textSize="25sp"
                     android:textAllCaps="false"
+                    android:paddingRight="25dp"
+                    android:paddingLeft="25dp"
                     android:textColor="@color/white" />
             </LinearLayout>
-            <!--<EditText
-                android:id="@+id/emailtext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout1"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-light"
-                android:hint="E-mail"
-                android:inputType="textEmailAddress" />
-
-            <EditText
-                android:id="@+id/phonetext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/emailtext"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-light"
-                android:hint="Phone No."
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/passtext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/phonetext"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-light"
-                android:hint="Password"
-                android:inputType="number" />
 
 
-            <EditText
-                android:id="@+id/addresstext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/passtext"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-light"
-                android:hint="Address"
-                android:inputType="number" />
-
-            -->
         </RelativeLayout>
     </ScrollView>
 

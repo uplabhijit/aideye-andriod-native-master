@@ -13,7 +13,10 @@
         
     <string name="setting_text"> Setting </string>
 
-        
+    <string name="subscription_text">Sottoscrizione</string>
+
+    <string name="logout_text">Disconnettersi</string>
+
     <string name="good_morning"> Good Morning </string>
         
     <string name="good_afternoon"> Good Afternoon </string>

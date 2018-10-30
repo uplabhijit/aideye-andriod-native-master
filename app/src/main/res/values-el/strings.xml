@@ -12,6 +12,10 @@
     <string name="save_button"> Αποθήκευση </string>
         
     <string name="setting_text"> Ρύθμιση </string>
+
+    <string name="subscription_text">Συνδρομή</string>
+
+    <string name="logout_text">Αποσυνδέση</string>
         
     <string name="good_morning"> Καλημέρα </string>
         

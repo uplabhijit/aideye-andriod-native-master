@@ -26,6 +26,8 @@
             android:layout_height="45dp"
             android:layout_weight="1"
             android:id="@+id/auditory_button"
+            android:textStyle="bold"
+            android:textSize="20sp"
             android:textColor="#fff"
             android:text="@string/auditory_button_text"/>
 
@@ -34,6 +36,8 @@
             android:layout_height="45dp"
             android:layout_weight="1"
             android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
             android:id="@+id/interactive_button"
             android:text="@string/interactive_button_text"/>
 

@@ -2,8 +2,7 @@
 <resources>
     <string name="app_name">AidEye</string>
     <string name="data_text_hint_interactive">Type Here</string>
-    <string name="data_text_hint_auditory">Tap on mic button</string>
-    <string name="powered_by">Powered by</string>
+    <string name="data_text_hint_auditory">Double tap screen to speak</string>
     <string name="save_button">Save</string>
     <string name="setting_text">Setting</string>
     <string name="subscription_text">Subscription</string>
@@ -18,14 +17,14 @@
     <string name="test_gender_data">Select voice gender</string>
     <string name="nfc_not_supported_msg">Your device is not nfc supported</string>
     <string name="nfc_disable_msg">Nfc is disabled please turn on</string>
-    <string name="welcome_msg">Kindly tap on screen to speak, capture and store data on tag</string>
-    <string name="prefix_msg_of_confirm_dialog">You said</string>
-    <string name="sufix_msg_of_confirm_dialog"> Tap  tag  to the device.  to store data. in A nfc tag</string>
+    <string name="welcome_msg">Kindly double tap on screen to speak, capture and store data on tag</string>
+    <string name="prefix_msg_of_confirm_dialog">You said  </string>
+    <string name="sufix_msg_of_confirm_dialog">, Tap  tag  to the device.  to store data. in A nfc tag</string>
     <string name="write_error">Write error</string>
     <string name="null_tag_msg">Corrupted tag</string>
     <string name="say_something_msg">Say something</string>
     <string name="speaking_after_msg">Try after speaking completed</string>
-    <string name="speach_not_supported">Speach not supported</string>
+    <string name="speach_not_supported">Speech not supported</string>
     <string name="tag_data_msg">tag data: </string>
     <string name="tag_detected">Tag Detected</string>
     <string name="auditory_button_text">Auditory</string>
@@ -33,13 +32,9 @@
     <string name="data_saved_successfully"> Data saved successfully</string>
     <string name="enable_nfc_title_text">Enable NFC</string>
     <string name="enable_nfc_description_text">Please enable NFC service in your device</string>
-    <string name="translating_data">Translating data...</string>
+    <string name="translating_data">Translating data…</string>
 
-    <string name="json_get_url"> http://ec2-18-216-89-205.us-east-2.compute.amazonaws.com:32951/user</string>
-    <string name="login_url">http://ec2-18-216-89-205.us-east-2.compute.amazonaws.com:32951/user/login</string>
-
-    <string name="json_otp_post_url">http://ec2-18-216-89-205.us-east-2.compute.amazonaws.com:32951/user/verifyotp</string>
-    <string name="phone_Number">PhoneNumber</string>
+    <string name="phone_Number">Phone Number</string>
     <string name="Password">Password</string>
     <string name="btn_Login">Login</string>
     <string name="forgot_Password">Forgot Password ?</string>
@@ -61,7 +56,7 @@
     <string name="auth">authenticate your account</string>
 
     <string name="phone">Enter OTP</string>
-    <string name="number">+91-4445556987</string>
+    <string name="number">+91–4445556987</string>
     <string name="ok">OK</string>
 
     <string-array name="listValues">
@@ -77,4 +72,49 @@
         <item>Polish</item>
         <item>Greek</item>
     </string-array>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="red">RED</string>
+    <string name="blue">BLUE</string>
+    <string name="green">GREEN</string>
+    <string name="permissiondeniedmsg">Permission denied</string>
+    <string name="pleasewaitloadermsg">please wait…</string>
+    <string name="msgforwrongemailpass">Email and Password required</string>
+    <string name="comingsoonmsg">Coming Soon</string>
+    <string name="auditorybtntext">dscgjya</string>
+    <string name="internetnotavamsg">Internet not available</string>
+    <string name="turnoninternetmsg">No internet connection. Turn on internet connection</string>
+    <string name="otprequiremsg">OTP required</string>
+    <string name="allfieldreqmsg">All the fields are required</string>
+    <string name="payment_amount">Payment Amount :</string>
+    <string name="status">Status :</string>
+    <string name="payment_id">Payment Id :</string>
+    <string name="type_here">Type here</string>
+    <string name="powered_by">Powered by</string>
+    <string name="gocube_technology">GoCube Technology</string>
+    <string name="please_subscribe_to_plan_first">Please Subscribe to plan first</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="verify">Verify</string>
+    <string name="plan_1">Plan 1</string>
+    <string name="lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="book">Book</string>
+    <string name="planamount">300$</string>
+    <string name="full_name">Full Name</string>
+    <string name="full_address">Full Address</string>
+    <string name="postcode_zipcode">Postcode/zipcode</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="_0">0</string>
+    <string name="_100">100</string>
+    <string name="hello_how_are_you">Hello, how are you ?</string>
+    <string name="amount">Amount</string>
+    <string name="_500">$500</string>
+    <string name="payment_now">Payment Now</string>
+    <string name="save">Save</string>
 </resources>
+
+
+

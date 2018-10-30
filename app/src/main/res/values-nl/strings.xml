@@ -13,6 +13,9 @@
         
     <string name="setting_text"> Instelling </string>
 
+    <string name="subscription_text">Abonnement</string>
+
+    <string name="logout_text">Uitloggen</string>
         
     <string name="good_morning"> Good Morning </string>
         

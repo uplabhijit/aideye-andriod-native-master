@@ -328,6 +328,7 @@
 
     <!-- Black -->
     <color name="black">#000000</color>
+    <color name="thorablack">#333232</color>
     <!-- Black -->
 
     <!-- White -->
@@ -493,4 +494,5 @@
     <!-- Mixed Colors -->
 
     <color name="window_background">#FFF5F5F5</color>
+    <color name="button_background_color">#925</color>
 </resources>

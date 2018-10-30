@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Black"
     android:orientation="vertical">
 
 
@@ -16,7 +17,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:src="@drawable/icons8_open_envelope_40" />
+            android:src="@drawable/password" />
 
         <customfonts.MyTextView_Roboto_Medium
             android:layout_width="wrap_content"
@@ -45,6 +46,7 @@
             android:background="#00000000"
             android:hint="@string/phone"
             android:id="@+id/otp"
+            android:textColor="@color/white"
             android:inputType="number"
             android:paddingLeft="20dp"
             android:paddingRight="20dp" />
@@ -60,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"
-            android:text="Verify"
+            android:text="@string/verify"
             android:textAllCaps="false"
             android:onClick="verifyotp"
             android:textColor="#fff"

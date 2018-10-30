@@ -13,6 +13,10 @@
         
     <string name="setting_text"> सेटिंग </string>
 
+    <string name="subscription_text">अंशदान</string>
+
+    <string name="logout_text">लोग आउट</string>
+
         
     <string name="good_morning"> सुप्रभात </string>
         
@@ -29,7 +33,8 @@
         <string name="test_voice_data_content"> यह ध्वनि परीक्षण </string> के लिए परीक्षण डेटा है
         
     <string name="nfc_not_supported_msg"> आपका डिवाइस nfc समर्थित नहीं है </string>
-        <string name="nfc_disable_msg">कृपया अपने डिवाइस में एनएफसी सेवा सक्षम करें</string> चालू करें
+        <string name="nfc_disable_msg">कृपया अपने डिवाइस में एनएफसी सेवा सक्षम करें</string> चालू
+    करें
         
     <string name="welcome_msg"> कृपया टैग पर डेटा बोलने, कैप्चर करने और स्टोर करने के लिए स्क्रीन पर टैप करें </string>
         

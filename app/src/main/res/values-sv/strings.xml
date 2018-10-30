@@ -13,6 +13,10 @@
         
     <string name="setting_text"> Inställning </string>
 
+    <string name="subscription_text">Prenumeration</string>
+
+    <string name="logout_text">Logga ut</string>
+
         
     <string name="good_morning"> God morgon </string>
         
