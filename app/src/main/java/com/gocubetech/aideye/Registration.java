@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ public class Registration extends AppCompatActivity {
     static final String REQ_TAG = "VACTIVITY";
     public String deviceId;
     public String model;
+    private JSONObject activeSubscription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +60,13 @@ public class Registration extends AppCompatActivity {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
+            /*To get deviceId*/
             deviceId = telephonyManager.getDeviceId();
         } else {
             System.out.println("permission denied");
         }
+
+        /*to get model number*/
         model = Build.MODEL;
         String os = "android";
         System.out.println("os>>>>>>>>>>>>>>>>>" + os);
@@ -103,6 +108,8 @@ public class Registration extends AppCompatActivity {
         }
     }
 
+
+    /*function call to register*/
     public void register(View view) {
         if (nameText.getText().toString().length() > 0 && emailText.getText().toString().length() > 0 && phoneText.getText().toString().length() > 0 && passText.getText().toString().length() > 0 && addressText.getText().toString().length() > 0 && zipcode.getText().toString().length() > 0) {
             progress = new ProgressDialog(this);
@@ -128,6 +135,8 @@ public class Registration extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+
+            System.out.println("device Id---------------" + json);
             String url = ApiConstant.api_registration_url;
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, json,
                     new Response.Listener<JSONObject>() {
@@ -143,10 +152,29 @@ public class Registration extends AppCompatActivity {
                                     String errorMessage = serverResp.getString("message");
                                     Toast.makeText(Registration.this, errorMessage, Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Intent fp;
-                                    fp = new Intent(Registration.this, OtpActivity.class);
-                                    fp.putExtra("phoneNumber", phoneText.getText().toString());
-                                    startActivity(fp);
+
+                                    JSONArray subscriptionarray = response.getJSONObject("result").getJSONArray("subscription");
+                                    for (int i = 0; i < subscriptionarray.length(); i++) {
+                                        if ((subscriptionarray.getJSONObject(i).getString("Active")).equals("true")) {
+                                            activeSubscription = subscriptionarray.getJSONObject(i);
+                                        }
+                                    }
+
+                                    SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+                                    SharedPreferences.Editor editor = pref.edit();
+                                    editor.putString("store", response.toString());
+                                    editor.putBoolean("loginStatus", true);
+                                    editor.putString("userId", response.getJSONObject("result").getString("_id"));
+                                    editor.putString("activeSubscription", activeSubscription.toString());
+
+                                    editor.commit();
+                                    boolean status = pref.getBoolean("loginStatus", false);
+                                    if (status) {
+                                        Intent fp;
+                                        fp = new Intent(Registration.this, MainActivity.class);
+                                        startActivity(fp);
+                                        finish();
+                                    }
                                 }
                             } catch (JSONException e) {
                                 // TODO Auto-generated catch block

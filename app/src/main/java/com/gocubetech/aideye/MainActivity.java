@@ -1,5 +1,6 @@
 package com.gocubetech.aideye;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -10,7 +11,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
@@ -18,10 +22,15 @@ import android.nfc.Tag;
 import android.nfc.tech.Ndef;
 import android.nfc.tech.NdefFormatable;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.GestureDetector;
@@ -40,8 +49,20 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
+import com.gocubetech.aideye.Constant.ApiConstant;
 import com.gocubetech.aideye.Constant.MeMeConstant;
 import com.gocubetech.aideye.DataHandler.MeMePref;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -53,6 +74,7 @@ import java.util.Locale;
 import Utility.SDUtility;
 import co.ceryle.segmentedbutton.SegmentedButton;
 import co.ceryle.segmentedbutton.SegmentedButtonGroup;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener, TextToSpeech.OnUtteranceCompletedListener, GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
     NfcAdapter mAdapter;
@@ -78,7 +100,17 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
     private SegmentedButtonGroup segmentedButtonGroup;
     private LinearLayout intractiveButtonsContainer;
     public GestureDetector gestureDetector;
-    GoogleTranslateMainActivity translator = new GoogleTranslateMainActivity("AIzaSyAWPLjcaA8ortKKHxQmNlhiy9U48vCVB3M");
+    //GoogleTranslateMainActivity translator = new GoogleTranslateMainActivity("AIzaSyAWPLjcaA8ortKKHxQmNlhiy9U48vCVB3M");
+    GoogleTranslateMainActivity translator = new GoogleTranslateMainActivity("AIzaSyAItH4UldrWDVv-YN9NHAmFi7fTibqbRNc");
+    private SharedPreferences pref;
+    private RequestQueue requestQueue;
+    static final String REQ_TAG = "LOGOUTACTIVITY";
+    private SharedPreferences.Editor editor;
+    private String deviceId;
+    private String model;
+    private JSONObject serverresponse;
+    private ProgressDialog progress;
+    public CircleImageView menu_profileView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +119,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         //detector to detect touch
+        requestQueue = RequestQueueSingleton.getInstance(this.getApplicationContext()).getRequestQueue();
         gestureDetector = new GestureDetector(this, this);
         dataEditText = findViewById(R.id.editText);
         dataEditText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
@@ -94,6 +127,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         menuImageView = findViewById(R.id.menu_imageView);
         indicator = findViewById(R.id.indicator_wrapper);
         poweredByText = findViewById(R.id.powered_by_text);
+        menu_profileView = findViewById(R.id.menu_profileView);
         indicator.setVisibility(View.INVISIBLE);
         //editTextSizeChanged();
         tts = new TextToSpeech(this, this);
@@ -115,6 +149,79 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             MeMePref.addStringPreference(this, String.valueOf(ttsPitch), MeMeConstant.PREF_VOICE_PITCH);
             MeMePref.addStringPreference(this, String.valueOf(ttsSpeed), MeMeConstant.PREF_VOICE_SPEED);
             MeMePref.addStringPreference(this, "en", MeMeConstant.PREF_VOICE_LANG);
+        }
+
+        /*function call to get device info*/
+        deviceInfo();
+    }
+
+    private void checkProfileStatus() {
+        pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+        JSONObject serverResp = null;
+        try {
+            serverResp = new JSONObject(pref.getString("store", ""));
+            if (serverResp.getJSONObject("result").has("imageId")) {
+                Boolean value = !serverResp.getJSONObject("result").getString("imageId").equals("");
+                if (value) {
+                    progress = new ProgressDialog(this);
+                    progress.setMessage("Loading...");
+                    progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+                    progress.show();
+                    String getImageUrl = ApiConstant.api_downloadimage_url + serverResp.getJSONObject("result").getString("imageId");
+                    Glide.with(this)
+                            .asBitmap()
+                            .load(getImageUrl)
+                            .into(new SimpleTarget<Bitmap>() {
+                                @Override
+                                public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                    menu_profileView.setImageBitmap(resource);
+                                    progress.dismiss();
+                                }
+
+                                @Override
+                                public void onLoadFailed(@Nullable Drawable errorDrawable) {
+                                    super.onLoadFailed(errorDrawable);
+                                    progress.dismiss();
+                                    Toast.makeText(MainActivity.this, "Image load fails", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        System.out.println(serverResp);
+    }
+
+    /*function for getting device info*/
+    private void deviceInfo() {
+        if (isPermissionGranted()) {
+            TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+                return;
+            }
+            //To get deviceId
+            deviceId = telephonyManager.getDeviceId();
+        } else {
+            System.out.println("permission denied");
+        }
+        //To get model number
+        model = Build.MODEL;
+    }
+
+    /*function call for permission gratnted*/
+    public boolean isPermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(Manifest.permission.READ_PHONE_STATE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                return true;
+            } else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, 2);
+                return false;
+            }
+        } else {
+            //permission is automatically granted on sdk<23 upon installation
+            return true;
         }
     }
 
@@ -195,6 +302,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         System.out.println("onResume:--------------- " + getIntent().getAction());
         //function call to update text
         updateTexts();
+        checkProfileStatus();
     }
 
     //function call to update text
@@ -367,14 +475,17 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                         acceptButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+                                /*SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
                                 SharedPreferences.Editor editor = pref.edit();
                                 editor.putBoolean("loginStatus", false);
                                 editor.commit();
                                 Intent intent = new Intent(getApplicationContext(), Login.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
-                                finish();
+                                finish();*/
+                                /*function call to logout*/
+                                dialog.dismiss();
+                                logout();
                             }
                         });
                         Button rejectButton = (Button) dialog.findViewById(R.id.btn_no);
@@ -461,6 +572,12 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         return true;
     }
 
+    public void openProfile(View view) {
+        Intent fp;
+        fp = new Intent(MainActivity.this, ProfileActivity.class);
+        startActivity(fp);
+    }
+
     //To check nfc reader task in background
     private class NdefReaderTask extends AsyncTask<Tag, Void, String> {
         @Override
@@ -511,7 +628,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         if (SDUtility.isNetworkAvailable(this)) {
             //if (SDUtility.isInternetAvailable()) {
             try {
-                if (isConnected()) {
+                if (SDUtility.isConnected()) {
                     new LanguageTranslation(fromLang, toLang, tagData).execute();
                 } else {
                     Toast.makeText(this, R.string.internetnotavamsg, Toast.LENGTH_SHORT).show();
@@ -524,11 +641,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         } else {
             Toast.makeText(this, R.string.turnoninternetmsg, Toast.LENGTH_SHORT).show();
         }
-    }
-
-    public boolean isConnected() throws InterruptedException, IOException {
-        String command = "ping -c 1 google.com";
-        return (Runtime.getRuntime().exec(command).waitFor() == 0);
     }
 
     //function call to create text message
@@ -698,9 +810,11 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         @Override
         protected String doInBackground(String... strings) {
             try {
-                translator = new GoogleTranslateMainActivity("AIzaSyAWPLjcaA8ortKKHxQmNlhiy9U48vCVB3M");
+                translator = new GoogleTranslateMainActivity("AIzaSyAItH4UldrWDVv-YN9NHAmFi7fTibqbRNc");
                 Thread.sleep(1000);
-                System.out.println("input language ------------->>>>>>>>>" + tagData);
+                System.out.println("input fromLang ------------->>>>>>>>>" + fromLang);
+                System.out.println("input language ------------->>>>>>>>>" + toLang);
+                System.out.println("input data ------------->>>>>>>>>" + tagData);
                 String text = translator.translte(tagData, fromLang, toLang);
                 return text;
             } catch (Exception e) {
@@ -734,5 +848,83 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             super.onProgressUpdate(values);
         }
     }
-    //Integrating Asynctask to call Google Translate API ........End..........
+
+    private void logout() {
+        //To check internet connection
+        if (SDUtility.isNetworkAvailable(MainActivity.this)) {
+            try {
+                if (SDUtility.isConnected()) {
+                    progress = new ProgressDialog(MainActivity.this);
+                    progress.setMessage(getString(R.string.pleasewaitloadermsg));
+                    progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+                    progress.show();
+                    pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+                    String response = pref.getString("store", "");
+                    System.out.println("response>>>>>>>>>>>>>" + response);
+                    try {
+                        serverresponse = new JSONObject(response);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    JSONObject json = new JSONObject();
+                    try {
+                        json.put("phoneNumber", serverresponse.getJSONObject("result").getString("phoneNumber"));
+                        json.put("model", model);
+                        json.put("os", "android");
+                        json.put("deviceId", deviceId);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("logout" + json);
+                    //api to logout
+                    String url = ApiConstant.api_logout_url;
+                    JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, json,
+                            new Response.Listener<JSONObject>() {
+                                @Override
+                                public void onResponse(JSONObject response) {
+                                    progress.dismiss();
+                                    System.out.println(response.toString());
+                                    try {
+                                        JSONObject serverResp = new JSONObject(response.toString());
+                                        System.out.println("success result: " + serverResp);
+                                        String errorStatus = serverResp.getString("error");
+                                        if (errorStatus.equals("true")) {
+                                            String errorMessage = serverResp.getString("message");
+                                            Toast.makeText(MainActivity.this, errorMessage, Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            editor = pref.edit();
+                                            editor.putBoolean("loginStatus", false);
+                                            editor.commit();
+                                            Intent intent = new Intent(getApplicationContext(), Login.class);
+                                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                    } catch (JSONException e) {
+                                        // TODO Auto-generated catch block
+                                        progress.dismiss();
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            progress.dismiss();
+                            System.out.println("Error getting response");
+                        }
+                    });
+                    jsonObjectRequest.setTag(REQ_TAG);
+                    requestQueue.add(jsonObjectRequest);
+                } else {
+                    Toast.makeText(MainActivity.this, R.string.error_net_connection, Toast.LENGTH_SHORT).show();
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            Toast.makeText(MainActivity.this, R.string.error_net_connection, Toast.LENGTH_SHORT).show();
+        }
+    }
 }

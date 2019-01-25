@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_edit"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:title="@string/action_edit"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/cancel"
+        app:showAsAction="always"
+        android:orderInCategory="100"
+        android:title="cancel"
+        android:icon="@drawable/cross_icon"
+        android:visible="false"/>
+
+</menu>

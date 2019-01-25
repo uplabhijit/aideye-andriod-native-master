@@ -110,10 +110,50 @@
     <string name="_0">0</string>
     <string name="_100">100</string>
     <string name="hello_how_are_you">Hello, how are you ?</string>
-    <string name="amount">Amount</string>
+    <string name="amount">Amount :</string>
     <string name="_500">$500</string>
     <string name="payment_now">Payment Now</string>
     <string name="save">Save</string>
+    <string name="name_hinttext">Name</string>
+    <string name="email_hinttext">Email</string>
+    <string name="aliasname_hinttext">Alias Name</string>
+    <string name="phoneNumber_hinttext">phoneNumber</string>
+    <string name="address_hinttext">Address</string>
+    <string name="zipcode_hinttext">Zip code</string>
+    <string name="profile_button_text">Update</string>
+    <string name="are_you_sure_want_to_logout">Are you sure want to Logout ?</string>
+
+    <string name="slide_1_title">Innovative Design</string>
+    <string name="slide_1_desc">AidEye App has a uniquely designed User Interface to suit the needs of our customers</string>
+
+    <string name="slide_2_title">User Friendly</string>
+    <string name="slide_2_desc">The Auditory and Interactive functionality in AidEye App enables the ease of use</string>
+
+    <string name="slide_3_title">Transformative App</string>
+    <string name="slide_3_desc">AidEye is a life-changing App that can be used by anyone especially the Blind, Elderly, Dyslexic and Autistic</string>
+
+    <string name="slide_4_title">Dummy title 4</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="next">NEXT</string>
+    <string name="nextsplash">NEXT</string>
+    <string name="skipsplash">SKIP</string>
+    <string name="startsplash">GOT IT</string>
+
+    <string name="error_net_connection">Error in network connection!</string>
+    <string name="activePlantoast">Plan already activated!!</string>
+    <string name="dummy_text_is_text_that_is_used_in_the_publishing_industry_or_by_web_designers_to_occupy_the_space_which_will_later_be_filled_with_real_content_the_most_well_known_dummy_text_is_the_lorem_ipsum_which_is_said_to_have_originated_in_the_16th_century_lorem_ipsum_is_composed_in_a_pseudo_latin_language_which_more_or_less_corresponds_to_proper_latin">Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with \'real\' content. The most well-known dummy text is the \'Lorem Ipsum\', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to \'proper\' Latin.</string>
+    <string name="verify_email_loader">Verfiying...</string>
+    <string name="reset_password_loader">Reseting...</string>
+    <string name="action_edit">Edit</string>
+    <string name="accessstorage_toastmsg">No access Storage</string>
+    <string name="profileimageuploaded">Profile Image uploaded Successfully!!</string>
+    <string name="profileupdate_toastmsg">Profile Updated Successfully!!</string>
+    <string name="pleasewait_text">Updating...</string>
+
+
 </resources>
 
 

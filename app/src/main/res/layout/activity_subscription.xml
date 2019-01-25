@@ -5,98 +5,164 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".SubscriptionActivity">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/black">
+        android:layout_height="match_parent">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view"
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
-            android:layout_marginTop="40dp"
-            card_view:cardCornerRadius="1000dp">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/driver_imageview"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/moneydollar" />
+
+            <LinearLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/driver_imageview"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/driver_imageview"
+                android:layout_toRightOf="@+id/driver_imageview"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plan_1"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/planDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#1d1d1f"
+                    android:text="@string/dummy_text_is_text_that_is_used_in_the_publishing_industry_or_by_web_designers_to_occupy_the_space_which_will_later_be_filled_with_real_content_the_most_well_known_dummy_text_is_the_lorem_ipsum_which_is_said_to_have_originated_in_the_16th_century_lorem_ipsum_is_composed_in_a_pseudo_latin_language_which_more_or_less_corresponds_to_proper_latin"
+                    android:textColor="@color/White"
+                    android:textColorLink="#eea636"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
 
             <RelativeLayout
-                android:id="@+id/layout1"
-                android:layout_width="351dp"
-                android:layout_height="84dp"
-                android:layout_gravity="center">
+                android:id="@+id/layout_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_layout"
+                android:layout_centerInParent="true">
 
-                <ImageView
-                    android:id="@+id/imagespeed"
-                    android:layout_width="1000dp"
-                    android:layout_height="1000dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:src="@drawable/paypal" />
+                <TextView
+                    android:id="@+id/test_voice_data_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/amount"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="200dp"
+                    android:text="@string/_500"
+                    android:textColor="#eea636"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
 
-        <RelativeLayout
-            android:id="@+id/layout_amount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/card_view"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:id="@+id/test_voice_data_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:text="@string/amount"
-                android:textColor="@color/white"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/amount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/test_voice_data_label"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:text="@string/_500"
-                android:textColor="#eea636"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/layout_amount"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="30dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/layout_amount"
                 android:layout_gravity="center"
-                android:background="@drawable/round_button"
-                android:onClick="paymentNow"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:text="@string/payment_now"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                card_view:cardCornerRadius="1000dp">
 
-    </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="351dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imagespeed"
+                        android:layout_width="1000dp"
+                        android:layout_height="1000dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/paypal" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:enabled="true"
+                    android:text="PayPal "
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/round_button"
+                    android:onClick="paymentNow"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/payment_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

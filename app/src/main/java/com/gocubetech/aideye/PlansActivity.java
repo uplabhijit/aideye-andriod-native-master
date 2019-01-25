@@ -31,7 +31,7 @@ public class PlansActivity extends AppCompatActivity {
     private PlansListAdapter pAdapter;
     private ProgressDialog progress;
     private List<Plan> planList = new ArrayList<>();
-    static final String REQ_TAG = " PLANACTIVITY";
+    static final String REQ_TAG = "PLANACTIVITY";
     private Bundle bundle;
 
     @Override
@@ -44,11 +44,24 @@ public class PlansActivity extends AppCompatActivity {
         requestQueue = RequestQueueSingleton.getInstance(this.getApplicationContext())
                 .getRequestQueue();
         bundle = getIntent().getExtras();
-        pAdapter = new PlansListAdapter(planList, bundle, this);
+        pAdapter = new PlansListAdapter(planList, bundle, PlansActivity.this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(pAdapter);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        /*api call to get plan list*/
+        getPlanList();
+    }
+
+    /*function call to get plan list*/
+    private void getPlanList() {
+        planList = new ArrayList<>();
         progress = new ProgressDialog(this);
         progress.setMessage(getString(R.string.pleasewaitloadermsg));
         progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
@@ -71,11 +84,13 @@ public class PlansActivity extends AppCompatActivity {
                                         planJsonObject.getString("name"),
                                         planJsonObject.getString("amount"),
                                         planJsonObject.getString("currency"),
-                                        planJsonObject.getString("description"));
+                                        planJsonObject.getString("description"),
+                                        planJsonObject.getString("_id"));
                                 System.out.println("plan name:>>_>>>>>>-----------------------------" + plan.getName());
                                 planList.add(plan);
                             }
-                            pAdapter.notifyDataSetChanged();
+                            pAdapter = new PlansListAdapter(planList, bundle, PlansActivity.this);
+                            recyclerView.setAdapter(pAdapter);
                         } catch (JSONException e) {
                             // TODO Auto-generated catch block
                             progress.dismiss();
@@ -93,6 +108,73 @@ public class PlansActivity extends AppCompatActivity {
         requestQueue.add(jsonObjectRequest);
     }
 
+    /*private void getUserById() {
+        //To check internet connection
+        if (SDUtility.isNetworkAvailable(PlansActivity.this)) {
+            try {
+                if (SDUtility.isConnected()) {
+                    progress = new ProgressDialog(PlansActivity.this);
+                    progress.setMessage(getString(R.string.pleasewaitloadermsg));
+                    progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+                    progress.show();
+                    pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+                    String userId = pref.getString("userId", "");
+                    System.out.println("response>>>>>>>>>>>>>" + userId);
+                    //api to login
+                    //String url = ApiConstant.api_getUserById_url + userId;
+                    JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
+                            new Response.Listener<JSONObject>() {
+                                @Override
+                                public void onResponse(JSONObject response) {
+                                    progress.dismiss();
+                                    System.out.println(response.toString());
+                                    try {
+                                        JSONObject serverResp = new JSONObject(response.toString());
+                                        System.out.println("success result: " + serverResp);
+                                        String errorStatus = serverResp.getString("error");
+                                        if (errorStatus.equals("true")) {
+                                            String errorMessage = serverResp.getString("message");
+                                            Toast.makeText(PlansActivity.this, errorMessage, Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            JSONObject activeSubscription = null;
+                                            editor = pref.edit();
+                                            JSONArray subscriptionarray = response.getJSONObject("result").getJSONArray("subscription");
+                                            for (int i = 0; i < subscriptionarray.length(); i++) {
+                                                if ((subscriptionarray.getJSONObject(i).getString("Active")).equals("true")) {
+                                                    activeSubscription = subscriptionarray.getJSONObject(i);
+                                                }
+                                            }
+                                            editor.putString("activeSubscription", activeSubscription.toString());
+                                            editor.commit();
+                                        }
+                                    } catch (JSONException e) {
+                                        // TODO Auto-generated catch block
+                                        progress.dismiss();
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            progress.dismiss();
+                            System.out.println("Error getting response");
+                        }
+                    });
+                    jsonObjectRequest.setTag(REQ_TAG);
+                    requestQueue.add(jsonObjectRequest);
+                } else {
+                    Toast.makeText(this, R.string.error_net_connection, Toast.LENGTH_SHORT).show();
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            Toast.makeText(this, R.string.error_net_connection, Toast.LENGTH_SHORT).show();
+        }
+    }*/
+
     public boolean onOptionsItemSelected(MenuItem item) {
         onBackPressed();
         return super.onOptionsItemSelected(item);
@@ -102,4 +184,3 @@ public class PlansActivity extends AppCompatActivity {
         System.out.println("plan details>>>>>>>>>>>>>>>>");
     }
 }
-

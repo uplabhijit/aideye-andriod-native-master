@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.1" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gocubetech.aideye">
 
@@ -38,32 +38,48 @@
             android:name=".SettingActivity"
             android:label="Setting"
             android:windowSoftInputMode="stateHidden" />
+
         <activity
             android:name=".Registration"
             android:windowSoftInputMode="stateHidden">
-
         </activity>
-        <activity
-            android:name=".Login"
-            android:windowSoftInputMode="stateHidden">
+
+        <activity android:name=".ForgotPasswordActivity"></activity>
+
+        <activity android:name=".ProfileActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:label="Profile"></activity>
+
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".Login"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
         <activity
             android:name=".OtpActivity"
             android:windowSoftInputMode="stateHidden" />
+
         <activity android:name=".PayPalConfig" />
+
         <activity android:name=".ConfirmationActivity" />
+
         <activity
             android:name=".PlansActivity"
             android:label="Subscription" />
+
         <activity android:name=".Plan" />
+
         <activity
             android:name=".SubscriptionActivity"
             android:label="Payment Method" />
+
     </application>
 
 </manifest>

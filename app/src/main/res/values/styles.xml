@@ -3,14 +3,19 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#f7aa22</item>
         <item name="colorPrimaryDark">#f7aa22</item>
         <item name="colorAccent">#f3b13c</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">#f7aa22
+        </item>
+
     </style>
 
     <style name="HintText" parent="TextAppearance.Design.Hint">
-        <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#f7aa22</item>
+
     </style>
 
 </resources>
